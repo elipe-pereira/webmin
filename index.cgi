@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/bin/perl
 # Display all Webmin modules visible to the current user
 
 BEGIN { push(@INC, "."); };
@@ -48,9 +48,9 @@ else {
 		}
 	}
 &header(@args, undef, undef, 1, 1,
-	$tconfig{'brand'} ? 
+	$tconfig{'brand'} ?
 	"<a href=$tconfig{'brand_url'}>$tconfig{'brand'}</a>" :
-	$gconfig{'brand'} ? 
+	$gconfig{'brand'} ?
 	"<a href=$gconfig{'brand_url'}>$gconfig{'brand'}</a>" :
 	"<a href=http://www.webmin.com/>$text{'main_homepage'}</a>"
 	);
@@ -177,4 +177,3 @@ if ($miniserv{'logout'} &&
 
 print $text{'main_footer'};
 &footer();
-

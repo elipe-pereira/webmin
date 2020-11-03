@@ -181,7 +181,7 @@ if [ "$upgrading" = 1 ]; then
 	if [ $? != "0" ]; then
 		echo "logout=$config_dir/logout-flag" >> $config_dir/miniserv.conf
 	fi
-	
+
 	# Check for third-party modules in old version
 	if [ "$wadir" != "$oldwadir" ]; then
 		echo "Checking for third-party modules .."
@@ -264,7 +264,7 @@ else
 	fi
 	echo ""
 
-	# Test perl 
+	# Test perl
 	echo "Testing Perl ..."
 	if [ ! -x $perl ]; then
 		echo "ERROR: Failed to find perl at $perl"
@@ -890,5 +890,3 @@ if [ "$oldwadir" != "$wadir" -a "$upgrading" = 1 -a "$deletedold" != 1 ]; then
 	echo "version."
 	echo ""
 fi
-
-
